@@ -1,0 +1,38 @@
+1-
+% Var Average Cost Per Discharge =
+VAR vAVG = [Average Cost Per Discharge]
+VAR vAvgALL = CALCULATE([Average Cost Per Discharge],ALL())
+RETURN
+(vAVG-vAvgALL)/vAvgALL
+
+2-
+% VAR Avergage LOS Days = 
+VAR aAVG = [Average LOS Days]
+
+VAR aAvgALL = CALCULATE([Average LOS Days],ALL())
+RETURN
+(aAVG-aAvgALL)/aAvgALL
+
+3-
+Average Cost Per Discharge = DIVIDE(SUM(hospital_discharges[total_costs]), [Total Discharges])
+
+4-
+Average LOS Days = AVERAGE(hospital_discharges[length_of_stay])
+
+5-
+Average LOS Days ALL = CALCULATE([Average LOS Days],ALL())
+
+6-
+Avergae Cost Per Discharge ALL = CALCULATE([Average Cost Per Discharge],ALL())
+
+7-
+Total Discharges = COUNTROWS(hospital_discharges)
+
+8-
+Total Hospital = DISTINCTCOUNT(hospital_discharges[facility_id])
+
+9-
+Total Surgeons = DISTINCTCOUNT(hospital_discharges[operating_provider_license_number])
+
+10-
+Title Selected Hospital = "Hospital Profile: " & VALUES(hospital_discharges[facility_name])
