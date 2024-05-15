@@ -4,7 +4,7 @@ LOS decreases when:
 - illness description is 'Minor' ==> LOS decreases by 1.32 days compared to other features.
 
 Key Influencers affecting Cost of Discharge:
-Cost of Discharge incearses when:
-- Severity of illness description is 'Extreme' ==> Cost of Discharge increases by 37k than the averege.
+Cost of Discharge increarses when:
+- Severity of illness description is 'Extreme' ==> Cost of Discharge increases by 37k than the average.
 - Risk of Mortality is 'Extreme' ==> Cost of Discharge increases by 24k than the average.
 - Health Service Area 'New York' ==> Cost of discharge increases by 15k than he average.
